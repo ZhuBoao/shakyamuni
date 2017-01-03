@@ -5,8 +5,10 @@
 #include <shakyamuni/Types/types.h>
 #include "PreProcess.h"
 
-skmn::Image skmn::PreProcess::loadimage(std::string &filename) {
-    cv::Mat image = cv::imread(filename);
-    if(image.data) throw Exception(filename+" cannot be found or read");
-    return image;
+namespace skmn {
+    Image PreProcess::loadimage(std::string &filename) {
+        Image image = cv::imread(filename);
+        if (image.data) throw Exception(filename + " cannot be found or read");
+        return image;
+    }
 }

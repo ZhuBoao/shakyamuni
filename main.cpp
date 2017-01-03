@@ -1,7 +1,13 @@
 #include <iostream>
+#include "Test.h"
 
 int main() {
-    std::cout<<"Hello Boao"<<std::endl;
+
+    Test obj = Test();
+    obj.setid(10);
+    std::cout << obj.getid() << std::endl;
+
+    std::cout << "Hello Boao" << std::endl;
     std::cout << "Hello, World!" << std::endl;
     return 0;
 }

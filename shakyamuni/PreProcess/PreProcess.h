@@ -7,9 +7,15 @@
 #define SHAKYAMUNI_PREPROCESS_H
 
 #include <shakyamuni/Types/types.h>
+#include <opencv2/imgcodecs.hpp>
 
 class PreProcess{
 public:
+//    Image loadimage(std::string &filename){
+//        cv::Mat image = cv::imread(filename);
+//        if(image.data);
+//        return image;
+//    }
     virtual Image process() = 0;
 };
 

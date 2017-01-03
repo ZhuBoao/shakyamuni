@@ -8,15 +8,14 @@
 
 #include <shakyamuni/Types/types.h>
 #include <opencv2/imgcodecs.hpp>
+#include <shakyamuni/Helpers/Exception.h>
 
-class PreProcess{
-public:
-//    Image loadimage(std::string &filename){
-//        cv::Mat image = cv::imread(filename);
-//        if(image.data);
-//        return image;
-//    }
-    virtual Image process() = 0;
-};
+namespace skmn {
+    class PreProcess {
+    public:
+        Image loadimage(std::string &filename);
+        virtual Image process() = 0;
+    };
+}
 
 #endif //SHAKYAMUNI_PREPROCESS_H

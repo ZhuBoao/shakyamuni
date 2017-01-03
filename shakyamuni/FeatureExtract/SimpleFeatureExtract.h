@@ -8,10 +8,11 @@
 
 #include "FeatureExtract.h"
 
-class SimpleFeatureExtract: FeatureExtract {
-public:
-    Image extract();
-};
-
+namespace skmn {
+    class SimpleFeatureExtract : FeatureExtract {
+    public:
+        Image extract();
+    };
+}
 
 #endif //SHAKYAMUNI_SIMPLEFEATUREEXTRACT_H

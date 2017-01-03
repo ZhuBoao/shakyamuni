@@ -5,7 +5,9 @@
 #include <iostream>
 #include "SimpleFeatureExtract.h"
 
-Image SimpleFeatureExtract::extract() {
-    std::cout<<"simple feature extract test"<<std::endl;
-    return Image();
+namespace skmn {
+    Image SimpleFeatureExtract::extract() {
+        std::cout << "simple feature extract test" << std::endl;
+        return Image();
+    }
 }

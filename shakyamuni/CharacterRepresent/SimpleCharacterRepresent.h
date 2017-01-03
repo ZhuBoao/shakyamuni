@@ -8,10 +8,11 @@
 
 #include "CharacterRepresent.h"
 
-class SimpleCharacterRepresent: CharacterRepresent {
-public:
-    std::vector<std::string> represent();
-};
-
+namespace skmn {
+    class SimpleCharacterRepresent : CharacterRepresent {
+    public:
+        std::vector<std::string> represent();
+    };
+}
 
 #endif //SHAKYAMUNI_SIMPLECHARACTERREPRESENT_H

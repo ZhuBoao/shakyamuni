@@ -5,14 +5,17 @@
 
 int main() {
 
-    Controller ctrl = Controller();
-    BinaryPreProcess preProcess = BinaryPreProcess();
-    SimpleFeatureExtract featureExtract = SimpleFeatureExtract();
-    SimpleCharacterRepresent characterRepresent = SimpleCharacterRepresent();
-    ctrl.setPreProcessPtr((PreProcess *) &preProcess);
-    ctrl.setFeatureExtract((FeatureExtract *) &featureExtract);
-    ctrl.setCharacterRepresent((CharacterRepresent *) &characterRepresent);
+    skmn::Controller ctrl = skmn::Controller();
+    skmn::BinaryPreProcess preProcess = skmn::BinaryPreProcess();
+    skmn::SimpleFeatureExtract featureExtract = skmn::SimpleFeatureExtract();
+    skmn::SimpleCharacterRepresent characterRepresent = skmn::SimpleCharacterRepresent();
+    ctrl.setPreProcessPtr((skmn::PreProcess *) &preProcess);
+    ctrl.setFeatureExtract((skmn::FeatureExtract *) &featureExtract);
+    ctrl.setCharacterRepresent((skmn::CharacterRepresent *) &characterRepresent);
     ctrl.test();
+
+    std::string test = "test.jpg";
+//    preProcess.loadimage(test);
 
     return 0;
 }

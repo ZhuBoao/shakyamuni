@@ -7,7 +7,9 @@
 
 #include <opencv2/core.hpp>
 
-typedef cv::Mat Image;
-typedef cv::Size ImgSize;
+namespace skmn {
+    typedef cv::Mat Image;
+    typedef cv::Size ImgSize;
+}
 
 #endif //SHAKYAMUNI_TYPES_H

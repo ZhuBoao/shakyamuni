@@ -5,7 +5,9 @@
 #include <iostream>
 #include "SimpleCharacterRepresent.h"
 
-std::vector<std::string> SimpleCharacterRepresent::represent() {
-    std::cout<<"simple character represent test"<<std::endl;
-    return std::vector<std::string>();
+namespace skmn {
+    std::vector<std::string> SimpleCharacterRepresent::represent() {
+        std::cout << "simple character represent test" << std::endl;
+        return std::vector<std::string>();
+    }
 }

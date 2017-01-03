@@ -8,10 +8,11 @@
 
 #include <shakyamuni/Types/types.h>
 
-class FeatureExtract {
-public:
-    virtual Image extract() = 0;
-};
-
+namespace skmn {
+    class FeatureExtract {
+    public:
+        virtual Image extract() = 0;
+    };
+}
 
 #endif //SHAKYAMUNI_FEATUREEXTRACT_H

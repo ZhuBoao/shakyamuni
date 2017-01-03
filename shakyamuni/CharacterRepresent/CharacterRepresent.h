@@ -9,11 +9,12 @@
 #include <iostream>
 #include <vector>
 
-class CharacterRepresent {
-public:
-    virtual std::vector<std::string> represent() = 0;
+namespace skmn {
+    class CharacterRepresent {
+    public:
+        virtual std::vector<std::string> represent() = 0;
 
-};
-
+    };
+}
 
 #endif //SHAKYAMUNI_CHARACTERREPRESENT_H

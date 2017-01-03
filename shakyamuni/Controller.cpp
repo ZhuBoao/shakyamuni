@@ -4,20 +4,22 @@
 
 #include "Controller.h"
 
-void Controller::setPreProcessPtr(PreProcess *preProcessPtr) {
-    Controller::preProcessPtr = preProcessPtr;
-}
+namespace skmn {
+    void Controller::setPreProcessPtr(PreProcess *preProcessPtr) {
+        Controller::preProcessPtr = preProcessPtr;
+    }
 
-void Controller::setFeatureExtract(FeatureExtract *featureExtract) {
-    Controller::featureExtract = featureExtract;
-}
+    void Controller::setFeatureExtract(FeatureExtract *featureExtract) {
+        Controller::featureExtract = featureExtract;
+    }
 
-void Controller::setCharacterRepresent(CharacterRepresent *characterRepresent) {
-    Controller::characterRepresent = characterRepresent;
-}
+    void Controller::setCharacterRepresent(CharacterRepresent *characterRepresent) {
+        Controller::characterRepresent = characterRepresent;
+    }
 
-void Controller::test() {
-    preProcessPtr->process();
-    featureExtract->extract();
-    characterRepresent->represent();
+    void Controller::test() {
+        preProcessPtr->process();
+        featureExtract->extract();
+        characterRepresent->represent();
+    }
 }

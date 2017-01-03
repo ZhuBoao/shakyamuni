@@ -8,8 +8,10 @@
 #include <iostream>
 #include "PreProcess.h"
 
-class BinaryPreProcess : PreProcess {
-    Image process();
-};
+namespace skmn {
+    class BinaryPreProcess : PreProcess {
+        Image process();
+    };
+}
 
 #endif //SHAKYAMUNI_BINARYPREPROCESS_H

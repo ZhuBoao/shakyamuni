@@ -5,7 +5,9 @@
 
 #include "BinaryPreProcess.h"
 
-Image BinaryPreProcess::process() {
-    std::cout << "binary preprocess test" << std::endl;
-    return Image();
+namespace skmn {
+    Image BinaryPreProcess::process() {
+        std::cout << "binary preprocess test" << std::endl;
+        return Image();
+    }
 }

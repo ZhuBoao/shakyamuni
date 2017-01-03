@@ -2,11 +2,11 @@
 // Created by kakarotto on 1/3/17.
 //
 
-#include <iostream>
-#include "PreProcess.h"
-
 #ifndef SHAKYAMUNI_BINARYPREPROCESS_H
 #define SHAKYAMUNI_BINARYPREPROCESS_H
+
+#include <iostream>
+#include "PreProcess.h"
 
 class BinaryPreProcess : PreProcess {
     Image process();

@@ -5,8 +5,7 @@
 #ifndef SHAKYAMUNI_CHARACTERREPRESENT_H
 #define SHAKYAMUNI_CHARACTERREPRESENT_H
 
-
-#include "../Types/types.h"
+#include <shakyamuni/Types/types.h>
 
 class CharacterRepresent {
 public:

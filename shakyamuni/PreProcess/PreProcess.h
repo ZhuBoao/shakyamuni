@@ -2,10 +2,11 @@
 // Created by kakarotto on 1/3/17.
 //
 
-#include "../Types/types.h"
 
 #ifndef SHAKYAMUNI_PREPROCESS_H
 #define SHAKYAMUNI_PREPROCESS_H
+
+#include <shakyamuni/Types/types.h>
 
 class PreProcess{
 public:

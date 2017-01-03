@@ -6,7 +6,7 @@
 #define SHAKYAMUNI_FEATUREEXTRACT_H
 
 
-#include "../Types/types.h"
+#include <shakyamuni/Types/types.h>
 
 class FeatureExtract {
 public:

@@ -17,7 +17,9 @@ endif()
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp PreProcess/PreProcess.h Types/types.h Controller.h PreProcess/BinaryPreProcess.h Controller.cpp PreProcess/BinaryPreProcess.cpp PreProcess/PreProcess.cpp FeatureExtract/FeatureExtract.cpp FeatureExtract/FeatureExtract.h CharacterRepresent/CharacterRepresent.cpp CharacterRepresent/CharacterRepresent.h FeatureExtract/SimpleFeatureExtract.cpp FeatureExtract/SimpleFeatureExtract.h CharacterRepresent/SimpleCharacterRepresent.cpp CharacterRepresent/SimpleCharacterRepresent.h)
+include_directories(${PROJECT_SOURCE_DIR})
+
+set(SOURCE_FILES main.cpp shakyamuni/PreProcess/PreProcess.h shakyamuni/Types/types.h shakyamuni/Controller.h shakyamuni/PreProcess/BinaryPreProcess.h shakyamuni/Controller.cpp shakyamuni/PreProcess/BinaryPreProcess.cpp shakyamuni/PreProcess/PreProcess.cpp shakyamuni/FeatureExtract/FeatureExtract.cpp shakyamuni/FeatureExtract/FeatureExtract.h shakyamuni/CharacterRepresent/CharacterRepresent.cpp shakyamuni/CharacterRepresent/CharacterRepresent.h shakyamuni/FeatureExtract/SimpleFeatureExtract.cpp shakyamuni/FeatureExtract/SimpleFeatureExtract.h shakyamuni/CharacterRepresent/SimpleCharacterRepresent.cpp shakyamuni/CharacterRepresent/SimpleCharacterRepresent.h)
 add_executable(shakyamuni ${SOURCE_FILES})
 
 # Link your application with OpenCV libraries

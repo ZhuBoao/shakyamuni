@@ -1,7 +1,7 @@
-#include "Controller.h"
-#include "PreProcess/BinaryPreProcess.h"
-#include "FeatureExtract/SimpleFeatureExtract.h"
-#include "CharacterRepresent/SimpleCharacterRepresent.h"
+#include <shakyamuni/Controller.h>
+#include <shakyamuni/PreProcess/BinaryPreProcess.h>
+#include <shakyamuni/FeatureExtract/SimpleFeatureExtract.h>
+#include <shakyamuni/CharacterRepresent/SimpleCharacterRepresent.h>
 
 int main() {
 

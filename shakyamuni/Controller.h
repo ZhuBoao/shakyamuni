@@ -2,12 +2,14 @@
 // Created by kakarotto on 1/3/17.
 //
 
-#include "PreProcess/PreProcess.h"
-#include "FeatureExtract/FeatureExtract.h"
-#include "CharacterRepresent/CharacterRepresent.h"
+
 
 #ifndef SHAKYAMUNI_CONTROLLER_H
 #define SHAKYAMUNI_CONTROLLER_H
+
+#include <shakyamuni/PreProcess/PreProcess.h>
+#include <shakyamuni/FeatureExtract/FeatureExtract.h>
+#include <shakyamuni/CharacterRepresent/CharacterRepresent.h>
 
 class Controller{
 private:

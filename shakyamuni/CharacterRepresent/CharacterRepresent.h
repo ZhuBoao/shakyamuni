@@ -6,10 +6,13 @@
 #define SHAKYAMUNI_CHARACTERREPRESENT_H
 
 #include <shakyamuni/Types/types.h>
+#include <iostream>
+#include <vector>
 
 class CharacterRepresent {
 public:
     virtual std::vector<std::string> represent() = 0;
+
 };
 
 

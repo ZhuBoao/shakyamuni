@@ -17,7 +17,7 @@ endif()
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp)
+set(SOURCE_FILES main.cpp PreProcess/PreProcess.h Types/types.h Controller.h PreProcess/BinaryPreProcess.h Controller.cpp PreProcess/BinaryPreProcess.cpp PreProcess/PreProcess.cpp FeatureExtract/FeatureExtract.cpp FeatureExtract/FeatureExtract.h CharacterRepresent/CharacterRepresent.cpp CharacterRepresent/CharacterRepresent.h FeatureExtract/SimpleFeatureExtract.cpp FeatureExtract/SimpleFeatureExtract.h CharacterRepresent/SimpleCharacterRepresent.cpp CharacterRepresent/SimpleCharacterRepresent.h)
 add_executable(shakyamuni ${SOURCE_FILES})
 
 # Link your application with OpenCV libraries

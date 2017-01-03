@@ -1,23 +1,18 @@
-#include <iostream>
-#include <opencv2/core.hpp>
-#include <opencv2/highgui.hpp>
-#include <opencv2/imgproc.hpp>
-//#include <opencv2/videoio.hpp>
-#include <opencv/cv.h>
+#include "Controller.h"
+#include "PreProcess/BinaryPreProcess.h"
+#include "FeatureExtract/SimpleFeatureExtract.h"
+#include "CharacterRepresent/SimpleCharacterRepresent.h"
 
 int main() {
 
-    cv::Mat mat = cv::Mat();
+    Controller ctrl = Controller();
+    BinaryPreProcess preProcess = BinaryPreProcess();
+    SimpleFeatureExtract featureExtract = SimpleFeatureExtract();
+    SimpleCharacterRepresent characterRepresent = SimpleCharacterRepresent();
+    ctrl.setPreProcessPtr((PreProcess *) &preProcess);
+    ctrl.setFeatureExtract((FeatureExtract *) &featureExtract);
+    ctrl.setCharacterRepresent((CharacterRepresent *) &characterRepresent);
+    ctrl.test();
 
-    mat = cv::imread("../profile2.png");
-    while (true) {
-        cv::imshow("Dalao", mat);
-        if (cv::waitKey(10) == 27) {
-            break;
-        }
-    }
-
-    std::cout << "Hello Boao" << std::endl;
-    std::cout << "Hello, World!" << std::endl;
     return 0;
 }

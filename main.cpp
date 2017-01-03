@@ -15,7 +15,11 @@ int main() {
     ctrl.test();
 
     std::string test = "test.jpg";
-//    preProcess.loadimage(test);
+    try {
+        preProcess.loadimage(test);
+    } catch (skmn::Exception e) {
+        std::cerr << e.what() << std::endl;
+    }
 
     return 0;
 }

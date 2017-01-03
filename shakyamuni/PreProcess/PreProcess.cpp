@@ -8,7 +8,9 @@
 namespace skmn {
     Image PreProcess::loadimage(std::string &filename) {
         Image image = cv::imread(filename);
-        if (image.data) throw Exception(filename + " cannot be found or read");
+        if (!image.data) {
+            throw Exception(filename + " cannot be found or read");
+        }
         return image;
     }
 }

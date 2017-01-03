@@ -9,7 +9,7 @@
 #include "PreProcess.h"
 
 namespace skmn {
-    class BinaryPreProcess : PreProcess {
+    class BinaryPreProcess : public PreProcess {
         Image process();
     };
 }

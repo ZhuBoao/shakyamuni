@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Test.h"
+#include "opencv2/core.hpp"
 
 int main() {
 

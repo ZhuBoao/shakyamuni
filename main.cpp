@@ -9,16 +9,11 @@ int main() {
 
     cv::Mat mat = cv::Mat();
 
-    cv::VideoCapture capture;
-    capture.open(0);
-
-    if(capture.isOpened()){
-        capture >> mat;
-        while(!mat.empty()) {
-            cv::imshow("test", mat);
-            if(cv::waitKey(3)==27){
-                break;
-            }
+    mat = cv::imread("../profile2.png");
+    while (true) {
+        cv::imshow("Dalao", mat);
+        if (cv::waitKey(10) == 27) {
+            break;
         }
     }
 

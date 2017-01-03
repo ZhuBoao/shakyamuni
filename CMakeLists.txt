@@ -19,3 +19,6 @@ set(CMAKE_CXX_STANDARD 11)
 
 set(SOURCE_FILES main.cpp)
 add_executable(shakyamuni ${SOURCE_FILES})
+
+# Link your application with OpenCV libraries
+target_link_libraries(shakyamuni ${OpenCV_LIBS})

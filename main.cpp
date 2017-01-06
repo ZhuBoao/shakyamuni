@@ -16,12 +16,5 @@ int main() {
     ctrl.setCharacterRepresent((skmn::CharacterRepresent *) &characterRepresent);
     ctrl.test();
 
-//    std::string test = "test.jpg";
-//    try {
-//        preProcess.loadimage(test);
-//    } catch (skmn::Exception e) {
-//        std::cerr << e.what() << std::endl;
-//    }
-
     return 0;
 }

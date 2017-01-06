@@ -6,12 +6,13 @@
 #define SHAKYAMUNI_TYPES_H
 
 #include <opencv2/core.hpp>
+#include <opencv2/videoio.hpp>
 
 namespace skmn {
     typedef cv::Mat Image;
     typedef cv::Size ImgSize;
     typedef cv::Mat Features;
-    typedef cv::Size FeatureSize;
+    typedef cv::VideoCapture Video;
 }
 
 #endif //SHAKYAMUNI_TYPES_H

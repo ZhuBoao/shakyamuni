@@ -17,6 +17,7 @@ namespace skmn {
         Image input;
         Image processed;
         ImgSize outputSize;
+        Video input_video;
         PreProcess *preProcessPtr;
         FeatureExtract *featureExtract;
         CharacterRepresent *characterRepresent;

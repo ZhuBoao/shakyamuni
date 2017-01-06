@@ -9,6 +9,7 @@ namespace skmn {
     void Controller::setPreProcessPtr(PreProcess *preProcessPtr) {
         Controller::preProcessPtr = preProcessPtr;
         preProcessPtr->loadimage("../shakyamuni/test.jpg", this->input);
+//        preProcessPtr->loadVideo("../shakyamuni/test_video.mp4", this->input_video);
         this->outputSize = cv::Size(240, (int) std::fabs(
                 (double) (this->input.size().height) / this->input.size().width * 240));
     }

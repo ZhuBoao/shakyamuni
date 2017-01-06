@@ -17,6 +17,10 @@ namespace skmn {
 
         Image &loadimage(const char *filename, Image &image);
 
+        Video &loadVideo(const std::string &filename, Video &video);
+
+        Video &loadVideo(const char *filename, Video &video);
+
         virtual Image &process(Image &srcImage, Image &dstImage, ImgSize &outputSize) = 0;
     };
 }

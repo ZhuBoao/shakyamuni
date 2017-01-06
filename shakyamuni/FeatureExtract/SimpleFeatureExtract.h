@@ -11,7 +11,7 @@
 namespace skmn {
     class SimpleFeatureExtract : FeatureExtract {
     public:
-        Image extract();
+        Image extract(Image &image);
     };
 }
 

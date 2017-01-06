@@ -19,7 +19,8 @@ set(CMAKE_CXX_STANDARD 11)
 
 include_directories(${PROJECT_SOURCE_DIR})
 
-set(SOURCE_FILES main.cpp shakyamuni/PreProcess/PreProcess.h shakyamuni/Types/types.h shakyamuni/Controller.h shakyamuni/PreProcess/BinaryPreProcess.h shakyamuni/Controller.cpp shakyamuni/PreProcess/BinaryPreProcess.cpp shakyamuni/PreProcess/PreProcess.cpp shakyamuni/FeatureExtract/FeatureExtract.cpp shakyamuni/FeatureExtract/FeatureExtract.h shakyamuni/CharacterRepresent/CharacterRepresent.cpp shakyamuni/CharacterRepresent/CharacterRepresent.h shakyamuni/FeatureExtract/SimpleFeatureExtract.cpp shakyamuni/FeatureExtract/SimpleFeatureExtract.h shakyamuni/CharacterRepresent/SingleCharacterRepresent.cpp shakyamuni/CharacterRepresent/SingleCharacterRepresent.h shakyamuni/Helpers/Exception.cpp shakyamuni/Helpers/Exception.h shakyamuni/CharacterRepresent/ComplexCharacterRepresent.cpp shakyamuni/CharacterRepresent/ComplexCharacterRepresent.h)
+set(SOURCE_FILES main.cpp shakyamuni/PreProcess/PreProcess.h shakyamuni/Types/types.h shakyamuni/Controller.h shakyamuni/PreProcess/SimpleBinaryPreProcess.h shakyamuni/Controller.cpp shakyamuni/PreProcess/SimpleBinaryPreProcess.cpp shakyamuni/PreProcess/PreProcess.cpp shakyamuni/FeatureExtract/FeatureExtract.cpp shakyamuni/FeatureExtract/FeatureExtract.h shakyamuni/CharacterRepresent/CharacterRepresent.cpp shakyamuni/CharacterRepresent/CharacterRepresent.h shakyamuni/FeatureExtract/SimpleFeatureExtract.cpp shakyamuni/FeatureExtract/SimpleFeatureExtract.h shakyamuni/CharacterRepresent/SingleCharacterRepresent.cpp shakyamuni/CharacterRepresent/SingleCharacterRepresent.h shakyamuni/Helpers/Exception.cpp shakyamuni/Helpers/Exception.h shakyamuni/CharacterRepresent/ComplexCharacterRepresent.cpp shakyamuni/CharacterRepresent/ComplexCharacterRepresent.h)
+
 add_executable(shakyamuni ${SOURCE_FILES})
 
 # Link your application with OpenCV libraries

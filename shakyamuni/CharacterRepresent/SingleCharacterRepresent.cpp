@@ -22,6 +22,8 @@ namespace skmn {
         return outStr;
     }
 
+    SingleCharacterRepresent::SingleCharacterRepresent(){}
+
     SingleCharacterRepresent::SingleCharacterRepresent(const Features &f) {
         this->intensities = f;
     }

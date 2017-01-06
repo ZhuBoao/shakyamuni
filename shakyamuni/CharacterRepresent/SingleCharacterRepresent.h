@@ -12,6 +12,7 @@
 namespace skmn {
     class SingleCharacterRepresent : public CharacterRepresent {
     public:
+        SingleCharacterRepresent();
         SingleCharacterRepresent(const Features&);
         SingleCharacterRepresent(const Features&,char character);
         std::vector<std::string> represent();

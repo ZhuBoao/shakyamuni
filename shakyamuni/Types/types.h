@@ -10,6 +10,8 @@
 namespace skmn {
     typedef cv::Mat Image;
     typedef cv::Size ImgSize;
+    typedef cv::Mat Features;
+    typedef cv::Size FeatureSize;
 }
 
 #endif //SHAKYAMUNI_TYPES_H

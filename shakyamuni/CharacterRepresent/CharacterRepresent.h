@@ -13,7 +13,6 @@
 namespace skmn {
     class CharacterRepresent {
     protected:
-        std::map<int, char> characterSet;
         Features intensities;
     public:
         void setIntensities(const Features &intensities);

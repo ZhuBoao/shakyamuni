@@ -4,16 +4,6 @@
 
 #include "CharacterRepresent.h"
 
-
-const std::map<int, char> &skmn::CharacterRepresent::getCharacterSet() const {
-    return characterSet;
-}
-
-
-void skmn::CharacterRepresent::setCharacterSet(const std::map<int, char> &characterSet) {
-    CharacterRepresent::characterSet = characterSet;
-}
-
 const skmn::Features &skmn::CharacterRepresent::getIntensities() const {
     return intensities;
 }

@@ -7,11 +7,12 @@
 
 namespace skmn {
     std::vector<std::string> SingleCharacterRepresent::represent() {
+        using pixel = unsigned char;
         auto size = intensities.size();
         std::vector<std::string> outStr;
         for(int row_i = 0; row_i != size.height ; ++row_i )
         {
-            const char* row = intensities.ptr<char>(row_i);
+            const pixel* row = intensities.ptr<pixel>(row_i);
             std::string rowStr;
             for(int col_i = 0; col_i != size.width ; ++col_i)
             {

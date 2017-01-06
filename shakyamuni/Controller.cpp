@@ -3,7 +3,6 @@
 //
 
 #include "Controller.h"
-#include <cmath>
 
 namespace skmn {
     void Controller::setPreProcessPtr(PreProcess *preProcessPtr) {

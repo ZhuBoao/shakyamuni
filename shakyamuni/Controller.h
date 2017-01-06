@@ -15,6 +15,7 @@ namespace skmn {
     class Controller {
     private:
         Image input;
+        Image processed;
         ImgSize outputSize;
         PreProcess *preProcessPtr;
         FeatureExtract *featureExtract;

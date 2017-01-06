@@ -13,9 +13,11 @@
 namespace skmn {
     class PreProcess {
     public:
-        Image loadimage(std::string &filename);
+        Image &loadimage(const std::string &filename, Image &image);
 
-        virtual Image process() = 0;
+        Image &loadimage(const char *filename, Image &image);
+
+        virtual Image &process(Image &srcImage, Image &dstImage, ImgSize &outputSize) = 0;
     };
 }
 

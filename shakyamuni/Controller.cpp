@@ -3,10 +3,14 @@
 //
 
 #include "Controller.h"
+#include <cmath>
 
 namespace skmn {
     void Controller::setPreProcessPtr(PreProcess *preProcessPtr) {
         Controller::preProcessPtr = preProcessPtr;
+        preProcessPtr->loadimage("../shakyamuni/test.jpg", this->input);
+        this->outputSize = cv::Size(320, (int) std::fabs(
+                (double) (this->input.size().height) / this->input.size().width * 320));
     }
 
     void Controller::setFeatureExtract(FeatureExtract *featureExtract) {
@@ -18,7 +22,7 @@ namespace skmn {
     }
 
     void Controller::test() {
-        preProcessPtr->process();
+        preProcessPtr->process(this->input, this->processed, this->outputSize);
         featureExtract->extract();
         characterRepresent->represent();
     }

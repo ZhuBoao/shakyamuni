@@ -24,6 +24,7 @@ namespace skmn {
     void Controller::test() {
         preProcessPtr->process(this->input, this->processed, this->outputSize);
         featureExtract->extract();
+        characterRepresent->setIntensities(this->processed);
         auto out = characterRepresent->represent();
         for(auto row:out)
         {

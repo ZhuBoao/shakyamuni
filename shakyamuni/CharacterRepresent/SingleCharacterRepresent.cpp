@@ -15,7 +15,7 @@ namespace skmn {
             std::string rowStr;
             for(int col_i = 0; col_i != size.width ; ++col_i)
             {
-                rowStr += row[col_i]?'#':' ';
+                rowStr += row[col_i]?"##":"  ";
             }
             outStr.push_back(rowStr);
         }

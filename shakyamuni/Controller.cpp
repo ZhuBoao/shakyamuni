@@ -3,6 +3,7 @@
 //
 
 #include "Controller.h"
+#include <iostream>
 
 namespace skmn {
     void Controller::setPreProcessPtr(PreProcess *preProcessPtr) {
@@ -20,6 +21,10 @@ namespace skmn {
     void Controller::test() {
         preProcessPtr->process();
         featureExtract->extract();
-        characterRepresent->represent();
+        auto out = characterRepresent->represent();
+        for(auto row:out)
+        {
+            std::cout<<row<<std::endl;
+        }
     }
 }

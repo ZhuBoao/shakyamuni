@@ -9,8 +9,8 @@ namespace skmn {
     void Controller::setPreProcessPtr(PreProcess *preProcessPtr) {
         Controller::preProcessPtr = preProcessPtr;
         preProcessPtr->loadimage("../shakyamuni/test.jpg", this->input);
-        this->outputSize = cv::Size(320, (int) std::fabs(
-                (double) (this->input.size().height) / this->input.size().width * 320));
+        this->outputSize = cv::Size(240, (int) std::fabs(
+                (double) (this->input.size().height) / this->input.size().width * 240));
     }
 
     void Controller::setFeatureExtract(FeatureExtract *featureExtract) {
@@ -26,9 +26,8 @@ namespace skmn {
         featureExtract->extract();
         characterRepresent->setIntensities(this->processed);
         auto out = characterRepresent->represent();
-        for(auto row:out)
-        {
-            std::cout<<row<<std::endl;
+        for (auto row:out) {
+            std::cout << row << std::endl;
         }
     }
 }

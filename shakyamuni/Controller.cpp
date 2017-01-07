@@ -62,8 +62,8 @@ namespace skmn {
 
     void Controller::playImage() {
         preProcessPtr->loadimage(this->imageFIleName, this->input);
-        this->outputSize = cv::Size(240, (int) std::fabs(
-                (double) (this->input.size().height) / this->input.size().width * 240));
+        this->outputSize = cv::Size(120, (int) std::fabs(
+                (double) (this->input.size().height) / this->input.size().width * 120));
 
         preProcessPtr->process(this->input, this->processed, this->outputSize);
         featureExtract->extract(this->processed);

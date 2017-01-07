@@ -78,16 +78,18 @@ namespace skmn {
     void Controller::playVideo() {
         preProcessPtr->loadVideo(this->videoFileName, this->input_video);
         Image edges;
-        cv::namedWindow("edges",1);
-        for(;;)
-        {
+        cv::namedWindow("edges", 1);
+        for (;;) {
             Image frame;
             this->input_video >> frame; // get a new frame from camera
-            cvtColor(frame, edges, cv::COLOR_BGR2GRAY);
-            GaussianBlur(edges, edges, cv::Size(7,7), 1.5, 1.5);
-            Canny(edges, edges, 0, 30, 3);
-            imshow("edges", edges);
-            if(cv::waitKey(30) >= 0) break;
+            if (!frame.empty()) {
+                cvtColor(frame, edges, cv::COLOR_BGR2GRAY);
+                cv::resize(edges, edges, ImgSize(edges.size().width / 5 * 2, edges.size().height / 5 * 2));
+                GaussianBlur(edges, edges, cv::Size(7, 7), 1.5, 1.5);
+                Canny(edges, edges, 0, 30, 3);
+                imshow("edges", edges);
+            }
+            if (cv::waitKey(30) == 27) break;
         }
     }
 }

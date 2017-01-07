@@ -18,12 +18,32 @@ namespace skmn {
         Image processed;
         ImgSize outputSize;
         Video input_video;
+        Video processed_video;
         PreProcess *preProcessPtr;
         FeatureExtract *featureExtract;
         CharacterRepresent *characterRepresent;
+        std::string videoFileName;
+        std::string imageFIleName;
+
+        void playImage();
+        void playVideo();
 
     public:
         void test();
+
+        void runImage(const char[]);
+        void runImage(const std::string&);
+
+        void runVideo(const char[]);
+        void runVideo(const std::string&);
+
+        void setVideoFileName(const std::string &videoFileName);
+
+        void setImageFIleName(const std::string &imageFIleName);
+
+        void setVideoFileName(const char *videoFileName);
+
+        void setImageFIleName(const char *imageFIleName);
 
         void setPreProcessPtr(PreProcess *preProcessPtr);
 

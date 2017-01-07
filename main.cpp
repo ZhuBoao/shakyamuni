@@ -3,11 +3,12 @@
 #include <shakyamuni/FeatureExtract/SimpleFeatureExtract.h>
 #include <shakyamuni/CharacterRepresent/SingleCharacterRepresent.h>
 #include <shakyamuni/CharacterRepresent/ComplexCharacterRepresent.h>
+#include <shakyamuni/PreProcess/FaceDetectBasePreProcess.h>
 
 int main() {
 
     skmn::Controller ctrl = skmn::Controller();
-    skmn::SimpleBinaryPreProcess preProcess = skmn::SimpleBinaryPreProcess();
+    skmn::FaceDetectBasePreProcess preProcess = skmn::FaceDetectBasePreProcess();
     skmn::SimpleFeatureExtract featureExtract = skmn::SimpleFeatureExtract();
     skmn::ComplexCharacterRepresent characterRepresent = skmn::ComplexCharacterRepresent(COMPRESS_4);
     ctrl.setPreProcessPtr((skmn::PreProcess *) &preProcess);

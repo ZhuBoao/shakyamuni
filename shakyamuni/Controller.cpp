@@ -8,9 +8,6 @@
 namespace skmn {
     void Controller::setPreProcessPtr(PreProcess *preProcessPtr) {
         Controller::preProcessPtr = preProcessPtr;
-        preProcessPtr->loadimage("../shakyamuni/test.jpg", this->input);
-        this->outputSize = cv::Size(320, (int) std::fabs(
-                (double) (this->input.size().height) / this->input.size().width * 320));
     }
 
     void Controller::setFeatureExtract(FeatureExtract *featureExtract) {
@@ -22,14 +19,62 @@ namespace skmn {
     }
 
     void Controller::test() {
+        this->runImage("../shakyamuni/test.jpg");
+    }
+
+    void Controller::runImage(const char *fileName) {
+        std::string fileStr(fileName);
+        Controller::imageFIleName = fileStr;
+        playImage();
+    }
+
+    void Controller::runImage(const std::string &fileName) {
+        Controller::imageFIleName = fileName;
+        playImage();
+    }
+
+    void Controller::runVideo(const char *fileName) {
+        std::string fileStr(fileName);
+        Controller::videoFileName = fileStr;
+        playVideo();
+    }
+
+    void Controller::runVideo(const std::string &fileName) {
+        Controller::imageFIleName = fileName;
+        playVideo();
+    }
+
+    void Controller::setVideoFileName(const std::string &videoFileName) {
+        Controller::videoFileName = videoFileName;
+    }
+
+    void Controller::setImageFIleName(const std::string &imageFIleName) {
+        Controller::imageFIleName = imageFIleName;
+    }
+
+    void Controller::setVideoFileName(const char *videoFileName) {
+        Controller::videoFileName = videoFileName;
+    }
+
+    void Controller::setImageFIleName(const char *imageFIleName) {
+        Controller::imageFIleName = imageFIleName;
+    }
+
+    void Controller::playImage() {
+        preProcessPtr->loadimage(this->imageFIleName, this->input);
+        this->outputSize = cv::Size(240, (int) std::fabs(
+                (double) (this->input.size().height) / this->input.size().width * 240));
+
         preProcessPtr->process(this->input, this->processed, this->outputSize);
-
         featureExtract->extract(this->processed);
-
         characterRepresent->setIntensities(this->processed);
         auto out = characterRepresent->represent();
         for (auto row:out) {
             std::cout << row << std::endl;
         }
+    }
+
+    void Controller::playVideo() {
+
     }
 }

@@ -3,6 +3,7 @@
 //
 
 #include <shakyamuni/Types/types.h>
+#include <opencv2/videoio.hpp>
 #include "PreProcess.h"
 
 namespace skmn {
@@ -21,5 +22,21 @@ namespace skmn {
             throw Exception(std::strcat(const_cast<char *>(filename), " cannot be found or read"));
         }
         return image;
+    }
+
+    Video &PreProcess::loadVideo(const std::string &filename, Video &video) {
+        Video capture(filename);
+        video = capture;
+        if( !capture.isOpened() )
+            throw Exception(filename + " cannot be found or read");
+        return video;
+    }
+
+    Video &PreProcess::loadVideo(const char *filename, Video &video) {
+        Video capture(filename);
+        video = capture;
+        if( !capture.isOpened() )
+            throw Exception(std::strcat(const_cast<char *>(filename), " cannot be found or read"));
+        return video;
     }
 }

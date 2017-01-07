@@ -36,12 +36,12 @@ namespace skmn {
                 std::cout << "No face detected" << std::endl;
             }
 
-            while (true) {
-                cv::imshow("equalizehist", tmpBinary);
-                if (cv::waitKey(20) == 27) {
-                    break;
-                }
-            }
+//            while (true) {
+//                cv::imshow("equalizehist", tmpBinary);
+//                if (cv::waitKey(20) == 27) {
+//                    break;
+//                }
+//            }
         }
     };
 }

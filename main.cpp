@@ -13,7 +13,8 @@ int main() {
     ctrl.setPreProcessPtr((skmn::PreProcess *) &preProcess);
     ctrl.setFeatureExtract((skmn::FeatureExtract *) &featureExtract);
     ctrl.setCharacterRepresent((skmn::CharacterRepresent *) &characterRepresent);
-    ctrl.test();
+    ctrl.runVideo("../shakyamuni/testVideo.avi");
+//    ctrl.test();
 
     return 0;
 }

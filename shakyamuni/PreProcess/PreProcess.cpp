@@ -25,9 +25,8 @@ namespace skmn {
     }
 
     Video &PreProcess::loadVideo(const std::string &filename, Video &video) {
-        Video capture(filename);
-        video = capture;
-        if( !capture.isOpened() )
+        video = Video(filename);
+        if( !video.isOpened() )
             throw Exception(filename + " cannot be found or read");
         return video;
     }

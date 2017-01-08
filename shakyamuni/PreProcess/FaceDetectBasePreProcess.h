@@ -11,6 +11,7 @@
 #include <opencv/cv.hpp>
 #include <iostream>
 #include <math.h>
+#include <shakyamuni/Helpers/Exception.h>
 
 namespace skmn {
     class FaceDetectBasePreProcess : public PreProcess {

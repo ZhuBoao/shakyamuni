@@ -9,7 +9,7 @@
 int main() {
 
     skmn::Controller ctrl = skmn::Controller();
-    skmn::SimpleGreyPreProcess preProcess = skmn::SimpleGreyPreProcess();
+    skmn::SimpleGreyPreProcess preProcess = skmn::SimpleGreyPreProcess(GRAY_LEVEL_4);
     skmn::SimpleFeatureExtract featureExtract = skmn::SimpleFeatureExtract();
     skmn::ComplexCharacterRepresent characterRepresent = skmn::ComplexCharacterRepresent(COMPRESS_4);
     ctrl.setPreProcessPtr((skmn::PreProcess *) &preProcess);

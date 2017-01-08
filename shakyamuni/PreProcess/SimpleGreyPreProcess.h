@@ -13,24 +13,11 @@
 namespace skmn {
     class SimpleGreyPreProcess : public PreProcess {
     private:
-        unsigned char grayLevel;
+        unsigned char mask;
     public:
-        SimpleGreyPreProcess(unsigned char grayLevel) {
-            this->grayLevel = grayLevel;
-        }
+        SimpleGreyPreProcess(int grayLevel);
 
-        Image &process(Image &srcImage, Image &dstImage, ImgSize &outputSize) {
-            Image tmpBinary;
-            cv::cvtColor(srcImage, tmpBinary, cv::COLOR_RGB2GRAY);
-            cv::resize(tmpBinary, dstImage, outputSize);
-            dstImage &= 0xe0;
-            while (true) {
-                cv::imshow("binary", dstImage);
-                if (cv::waitKey(20) == 27) {
-                    break;
-                }
-            }
-        }
+        Image &process(Image &srcImage, Image &dstImage, ImgSize &outputSize);
     };
 }
 

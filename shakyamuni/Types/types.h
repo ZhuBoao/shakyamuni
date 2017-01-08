@@ -7,8 +7,9 @@
 
 #include <opencv2/core.hpp>
 #include <opencv2/videoio.hpp>
-#define GRAY_LEVEL_8 8;
-#define GRAY_LEVEL_4 4;
+
+#define GRAY_LEVEL_8 8
+#define GRAY_LEVEL_4 4
 
 namespace skmn {
 

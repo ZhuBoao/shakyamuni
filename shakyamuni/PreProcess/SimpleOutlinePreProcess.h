@@ -11,7 +11,7 @@
 #include "PreProcess.h"
 
 namespace skmn {
-    class SimpleBinaryPreProcess : public PreProcess {
+    class SimpleOutlinePreProcess : public PreProcess {
     public:
         Image &process(Image &srcImage, Image &dstImage, ImgSize &outputSize);
     };

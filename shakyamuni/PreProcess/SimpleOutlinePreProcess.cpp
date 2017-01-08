@@ -3,11 +3,11 @@
 //
 
 
-#include "SimpleBinaryPreProcess.h"
+#include "SimpleOutlinePreProcess.h"
 
 namespace skmn {
 
-    Image &SimpleBinaryPreProcess::process(Image &srcImage, Image &dstImage, ImgSize &outputSize) {
+    Image &SimpleOutlinePreProcess::process(Image &srcImage, Image &dstImage, ImgSize &outputSize) {
         Image tmpImage = Image(srcImage.size(), CV_8U);
         cv::cvtColor(srcImage, tmpImage, CV_RGB2GRAY);
         cv::GaussianBlur(tmpImage, tmpImage, cv::Size(79, 79), 4);
@@ -17,12 +17,12 @@ namespace skmn {
         dstImage = Image(outputSize, CV_8U);
         cv::resize(tmpImage, dstImage, dstImage.size(), 0, 0, cv::INTER_CUBIC);
         cv::threshold(dstImage, dstImage, 128, 255, cv::THRESH_BINARY);
-        while (true) {
-            cv::imshow("input", srcImage);
-            cv::imshow("dstImage", dstImage);
-            if (cv::waitKey(20) == 27) {
-                break;
-            }
-        }
+//        while (true) {
+//            cv::imshow("input", srcImage);
+//            cv::imshow("dstImage", dstImage);
+//            if (cv::waitKey(20) == 27) {
+//                break;
+//            }
+//        }
     }
 }

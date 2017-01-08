@@ -52,10 +52,10 @@ std::vector<bool> skmn::ComplexCharacterRepresent::getSearchKey(unsigned char* p
 std::vector<std::string> skmn::ComplexCharacterRepresent::represent() {
     using pixel = unsigned char;
     std::vector<std::string> outStr;
-    for(int row_i = 0,height = intensities.rows, width=intensities.cols; row_i < height - compressedLevel ; row_i+=compressedLevel)
+    for(int row_i = 0,height = intensities.rows, width=intensities.cols; row_i <= height - compressedLevel ; row_i+=compressedLevel)
     {
         std::string rowStr;
-        for(int col_i = 0; col_i < width - compressedLevel ; col_i+=compressedLevel)
+        for(int col_i = 0; col_i <= width - compressedLevel ; col_i+=compressedLevel)
         {
             rowStr += charSet[getSearchKey(intensities.ptr<pixel>(row_i,col_i))];
         }

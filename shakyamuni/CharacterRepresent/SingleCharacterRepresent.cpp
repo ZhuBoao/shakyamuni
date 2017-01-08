@@ -5,10 +5,10 @@
 #include <iostream>
 #include <string>
 #include "SingleCharacterRepresent.h"
+#include <shakyamuni/Types/types.h>
 
 namespace skmn {
     std::vector<std::string> SingleCharacterRepresent::represent() {
-        using pixel = unsigned char;
         auto size = intensities.size();
         std::vector<std::string> outStr;
         std::string pixelStr;
@@ -16,7 +16,7 @@ namespace skmn {
         pixelStr.push_back(this->character);
         for(int row_i = 0; row_i != size.height ; ++row_i )
         {
-            const pixel* row = intensities.ptr<pixel>(row_i);
+            const Pixel* row = intensities.ptr<Pixel>(row_i);
             std::string rowStr;
             for(int col_i = 0; col_i != size.width ; ++col_i)
             {

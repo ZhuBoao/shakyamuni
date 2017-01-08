@@ -17,6 +17,7 @@ namespace skmn {
     typedef cv::Size ImgSize;
     typedef cv::Mat Features;
     typedef cv::VideoCapture Video;
+    typedef unsigned char Pixel;
 
 }
 

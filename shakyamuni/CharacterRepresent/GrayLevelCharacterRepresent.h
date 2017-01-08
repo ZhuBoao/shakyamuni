@@ -6,14 +6,19 @@
 #define SHAKYAMUNI_GRAYLEVELCHARACTERREPRESENT_H
 
 #include "CharacterRepresent.h"
+#include <shakyamuni/Types/types.h>
 
 namespace skmn{
     class GrayLevelCharacterRepresent :public CharacterRepresent{
     public:
         GrayLevelCharacterRepresent();
-
+        GrayLevelCharacterRepresent(int);
+        std::vector<std::string> represent();
     private:
-        int grayLevel = 4;
+        int grayLevel = GRAY_LEVEL_4;
+        Pixel getSearchKey(Pixel);
+        std::map<Pixel,std::string> charSet_4;
+        std::map<Pixel,std::string> charSet_8;
     };
 }
 

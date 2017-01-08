@@ -12,10 +12,10 @@ skmn::GrayLevelCharacterRepresent::GrayLevelCharacterRepresent() {
     charSet_4[3] = "@@";
 
     charSet_8[0] = "  ";
-    charSet_8[1] = "..";
-    charSet_8[2] = "--";
-    charSet_8[3] = "::";
-    charSet_8[4] = "++";
+    charSet_8[1] = "--";
+    charSet_8[2] = "::";
+    charSet_8[3] = "++";
+    charSet_8[4] = "nn";
     charSet_8[5] = "ww";
     charSet_8[6] = "WW";
     charSet_8[7] = "@@";

@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <string>
 #include "SingleCharacterRepresent.h"
 
 namespace skmn {
@@ -10,13 +11,16 @@ namespace skmn {
         using pixel = unsigned char;
         auto size = intensities.size();
         std::vector<std::string> outStr;
+        std::string pixelStr;
+        pixelStr.push_back(this->character);
+        pixelStr.push_back(this->character);
         for(int row_i = 0; row_i != size.height ; ++row_i )
         {
             const pixel* row = intensities.ptr<pixel>(row_i);
             std::string rowStr;
             for(int col_i = 0; col_i != size.width ; ++col_i)
             {
-                rowStr += row[col_i]?"##":"  ";
+                rowStr += row[col_i]?pixelStr:"  ";
             }
             outStr.push_back(rowStr);
         }

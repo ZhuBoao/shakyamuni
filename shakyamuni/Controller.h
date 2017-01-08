@@ -25,17 +25,18 @@ namespace skmn {
         std::string videoFileName;
         std::string imageFIleName;
 
-        void playImage();
+        void playImage(const int &width);
+
         void playVideo();
 
     public:
-        void test();
+        void runImage(const char[], const int &width = 120);
 
-        void runImage(const char[]);
-        void runImage(const std::string&);
+        void runImage(const std::string &, const int &width = 120);
 
         void runVideo(const char[]);
-        void runVideo(const std::string&);
+
+        void runVideo(const std::string &);
 
         void setVideoFileName(const std::string &videoFileName);
 

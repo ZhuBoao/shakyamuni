@@ -18,19 +18,15 @@ namespace skmn {
         Controller::characterRepresent = characterRepresent;
     }
 
-    void Controller::test() {
-        this->runImage("../shakyamuni/test.jpg");
-    }
-
-    void Controller::runImage(const char *fileName) {
+    void Controller::runImage(const char *fileName, const int &width) {
         std::string fileStr(fileName);
         Controller::imageFIleName = fileStr;
-        playImage();
+        playImage(width);
     }
 
-    void Controller::runImage(const std::string &fileName) {
+    void Controller::runImage(const std::string &fileName, const int &width) {
         Controller::imageFIleName = fileName;
-        playImage();
+        playImage(width);
     }
 
     void Controller::runVideo(const char *fileName) {
@@ -60,10 +56,14 @@ namespace skmn {
         Controller::imageFIleName = imageFIleName;
     }
 
-    void Controller::playImage() {
+    void Controller::playImage(const int &width) {
+        if (width < 40)
+            throw Exception("The width is too small to process!");
+
         preProcessPtr->loadimage(this->imageFIleName, this->input);
-        this->outputSize = cv::Size(240, (int) std::fabs(
-                (double) (this->input.size().height) / this->input.size().width * 240));
+
+        int height = (int) std::fabs((double) (this->input.size().height) / this->input.size().width * width);
+        this->outputSize = cv::Size(width % 2 ? width + 1 : width, height % 2 ? height + 1 : height);
 
         preProcessPtr->process(this->input, this->processed, this->outputSize);
         featureExtract->extract(this->processed);

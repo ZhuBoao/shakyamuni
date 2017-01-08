@@ -3,15 +3,10 @@
 //
 
 #include "Controller.h"
-#include <iostream>
 
 namespace skmn {
     void Controller::setPreProcessPtr(PreProcess *preProcessPtr) {
         Controller::preProcessPtr = preProcessPtr;
-    }
-
-    void Controller::setFeatureExtract(FeatureExtract *featureExtract) {
-        Controller::featureExtract = featureExtract;
     }
 
     void Controller::setCharacterRepresent(CharacterRepresent *characterRepresent) {
@@ -66,7 +61,6 @@ namespace skmn {
         this->outputSize = cv::Size(width % 2 ? width + 1 : width, height % 2 ? height + 1 : height);
 
         preProcessPtr->process(this->input, this->processed, this->outputSize);
-        featureExtract->extract(this->processed);
         characterRepresent->setIntensities(this->processed);
         auto out = characterRepresent->represent();
         for (auto row:out) {

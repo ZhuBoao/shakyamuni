@@ -13,7 +13,7 @@
 namespace skmn {
     class SimpleGreyPreProcess : public PreProcess {
     private:
-        unsigned char mask;
+        Pixel mask;
     public:
         SimpleGreyPreProcess(int grayLevel);
 

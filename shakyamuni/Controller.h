@@ -8,7 +8,6 @@
 #define SHAKYAMUNI_CONTROLLER_H
 
 #include <shakyamuni/PreProcess/PreProcess.h>
-#include <shakyamuni/FeatureExtract/FeatureExtract.h>
 #include <shakyamuni/CharacterRepresent/CharacterRepresent.h>
 
 namespace skmn {
@@ -20,7 +19,6 @@ namespace skmn {
         Video input_video;
         Video processed_video;
         PreProcess *preProcessPtr;
-        FeatureExtract *featureExtract;
         CharacterRepresent *characterRepresent;
         std::string videoFileName;
         std::string imageFIleName;
@@ -47,8 +45,6 @@ namespace skmn {
         void setImageFIleName(const char *imageFIleName);
 
         void setPreProcessPtr(PreProcess *preProcessPtr);
-
-        void setFeatureExtract(FeatureExtract *featureExtract);
 
         void setCharacterRepresent(CharacterRepresent *characterRepresent);
     };

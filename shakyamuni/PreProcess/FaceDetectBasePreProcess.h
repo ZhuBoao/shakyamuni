@@ -76,6 +76,7 @@ namespace skmn {
             } else {
                 std::cout << "face detected" << std::endl;
             }
+            return dstImage;
         }
     };
 }

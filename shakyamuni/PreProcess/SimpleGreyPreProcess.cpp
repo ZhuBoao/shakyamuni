@@ -30,5 +30,6 @@ namespace skmn {
 //                    break;
 //                }
 //            }
+        return dstImage;
     }
 }

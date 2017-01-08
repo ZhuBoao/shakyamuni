@@ -2,6 +2,8 @@
 // Created by kakarotto on 1/3/17.
 //
 
+#include <shakyamuni/Helpers/Exception.h>
+#include <shakyamuni/Helpers/Utils.h>
 #include "Controller.h"
 
 namespace skmn {
@@ -55,7 +57,7 @@ namespace skmn {
         if (width < 40)
             throw Exception("The width is too small to process!");
 
-        preProcessPtr->loadimage(this->imageFIleName, this->input);
+        Utils::loadimage(this->imageFIleName, this->input);
 
         int height = (int) std::fabs((double) (this->input.size().height) / this->input.size().width * width);
         this->outputSize = cv::Size(width % 2 ? width + 1 : width, height % 2 ? height + 1 : height);

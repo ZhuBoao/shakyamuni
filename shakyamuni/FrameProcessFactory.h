@@ -15,6 +15,7 @@
 
 namespace skmn {
     class FrameProcessFactory {
+    public:
         static FrameProcess create(PreProcessMode ppMode, CharacterMode cMode);
     };
 }

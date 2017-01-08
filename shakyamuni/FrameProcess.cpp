@@ -4,7 +4,7 @@
 
 #include "FrameProcess.h"
 
-namespace skmn{
+namespace skmn {
 
     FrameProcess::FrameProcess(PreProcess &preProcess, CharacterRepresent &characterRepresent) {
         this->preProcess = &preProcess;
@@ -22,6 +22,7 @@ namespace skmn{
 
     std::vector<std::string> FrameProcess::process() {
         this->preProcess->process(this->input, this->processed, this->outputSize);
+        this->characterRepresent->setIntensities(this->processed);
         return this->characterRepresent->represent();
     }
 }

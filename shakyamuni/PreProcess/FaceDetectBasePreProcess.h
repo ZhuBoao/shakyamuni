@@ -67,12 +67,12 @@ namespace skmn {
                 cv::cvtColor(srcImage, tmpBinary, cv::COLOR_RGB2GRAY);
                 cv::threshold(tmpBinary, dstImage, average, 255, cv::THRESH_BINARY_INV);
                 cv::resize(dstImage, dstImage, outputSize);
-                while (true) {
-                    cv::imshow("equalizehist", dstImage);
-                    if (cv::waitKey(20) == 27) {
-                        break;
-                    }
-                }
+//                while (true) {
+//                    cv::imshow("equalizehist", dstImage);
+//                    if (cv::waitKey(20) == 27) {
+//                        break;
+//                    }
+//                }
             } else {
                 std::cout << "face detected" << std::endl;
             }

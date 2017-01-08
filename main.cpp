@@ -14,7 +14,7 @@ int main() {
     ctrl.setPreProcessPtr((skmn::PreProcess *) &preProcess);
     ctrl.setFeatureExtract((skmn::FeatureExtract *) &featureExtract);
     ctrl.setCharacterRepresent((skmn::CharacterRepresent *) &characterRepresent);
-    ctrl.test();
+    ctrl.runImage("../shakyamuni/test3.jpg", 120);
 
     return 0;
 }

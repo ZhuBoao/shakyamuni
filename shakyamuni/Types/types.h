@@ -11,10 +11,10 @@
 #define GRAY_LEVEL_8 8
 #define GRAY_LEVEL_4 4
 
-#define GRAY_LEVEL_MODE_2       0
-#define GRAY_LEVEL_MODE_4       1
-#define GRAY_LEVEL_MODE_8       2
-#define COMPLEX_MODE            4
+#define GRAY_LEVEL_MODE_2       0b00000001
+#define GRAY_LEVEL_MODE_4       0b00000010
+#define GRAY_LEVEL_MODE_8       0b00000011
+#define COMPLEX_MODE            0b00000100
 namespace skmn {
     typedef cv::Mat Image;
     typedef cv::Size ImgSize;

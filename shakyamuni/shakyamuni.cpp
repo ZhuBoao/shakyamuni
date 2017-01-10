@@ -40,5 +40,24 @@ namespace skmn{
         shakyamuni::playImage(imageFileStr,width);
     }
 
+    void shakyamuni::playVideo(const std::string &videoFileName) {
+        //read video
+        Video video;
+        Utils::loadVideo(videoFileName,video);
+
+    }
+
+    void shakyamuni::playVideo(const char *videoFileStr) {
+        Video video;
+        Utils::loadVideo(videoFileStr,video);
+        for(;;)
+        {
+            Image frame;
+            video >> frame; 
+            cv::imshow(videoFileStr, frame);
+            if(cv::waitKey(30) == 27) break;
+        }
+    }
+
 
 }

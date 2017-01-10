@@ -2,6 +2,7 @@
 // Created by kakarotto on 1/8/17.
 //
 
+#include <shakyamuni/Helpers/Exception.h>
 #include "FrameProcess.h"
 
 namespace skmn {
@@ -21,8 +22,16 @@ namespace skmn {
     }
 
     std::vector<std::string> FrameProcess::process() {
+        if (!(this->input.data && outputSize.width && outputSize.height))
+            throw Exception("The input data or the outputsize is null");
+
         this->preProcess->process(this->input, this->processed, this->outputSize);
         this->characterRepresent->setIntensities(this->processed);
         return this->characterRepresent->represent();
+    }
+
+    FrameProcess::~FrameProcess() {
+        delete this->preProcess;
+        delete this->characterRepresent;
     }
 }

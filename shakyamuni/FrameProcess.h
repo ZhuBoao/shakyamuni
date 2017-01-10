@@ -20,6 +20,8 @@ namespace skmn {
     public:
         FrameProcess(PreProcess &preProcess, CharacterRepresent &characterRepresent);
 
+        ~FrameProcess();
+
         void setImage(Image &image);
 
         void setOutputWidth(const int &width);

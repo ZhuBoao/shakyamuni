@@ -18,7 +18,11 @@ namespace skmn {
         PreProcess *preProcess;
         CharacterRepresent *characterRepresent;
     public:
+        FrameProcess() = default;
+
         FrameProcess(PreProcess &preProcess, CharacterRepresent &characterRepresent);
+
+        ~FrameProcess();
 
         void setImage(Image &image);
 

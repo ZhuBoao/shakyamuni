@@ -7,9 +7,6 @@
 
 namespace skmn {
 
-    FrameProcess::FrameProcess() {
-
-    }
 
     FrameProcess::FrameProcess(PreProcess &preProcess, CharacterRepresent &characterRepresent) {
         this->preProcess = &preProcess;

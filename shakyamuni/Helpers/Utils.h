@@ -15,6 +15,11 @@ namespace skmn {
         static Image loadimage(const std::string &filename, Image &image);
 
         static Image loadimage(const char *filename, Image &image);
+
+        static Video loadVideo(const char *filename, Video &video);
+
+        static Video loadVideo(const std::string &filename, Video &video);
+
     };
 }
 

@@ -21,15 +21,8 @@ int main() {
 //    skmn::shakyamuni skmn = skmn::shakyamuni();
 //    skmn.playImage("../shakyamuni/test.jpg");
 
-
-    skmn::FrameProcess test = skmn::FrameProcessFactory::create(GREY_PROCESS_MODE_8, GRAY_LEVEL_MODE_8);
-    skmn::Image img;
-    skmn::Utils::loadimage("../shakyamuni/test.jpg", img);
-    test.setImage(img);
-    test.setOutputWidth(120);
-    for (auto line:test.process()) {
-        std::cout << line << std::endl;
-    }
+    skmn::shakyamuni ctrl = skmn::shakyamuni();
+    ctrl.playVideo("../shakyamuni/testVideo.avi");
 
     return 0;
 }

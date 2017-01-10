@@ -30,6 +30,7 @@ namespace skmn {
     typedef unsigned char CharacterMode;
     typedef unsigned char PreProcessMode;
     typedef unsigned char DefinedMode;
+    typedef unsigned long Time;
 }
 
 #endif //SHAKYAMUNI_TYPES_H
